@@ -3,7 +3,7 @@ import math
 
 def solve():
     s = 0
-    for n in range(3, 362800):
+    for n in range(3, math.factorial(9)):
         f = sum([math.factorial(int(d)) for d in str(n)])
         if f == n:
             s += n

@@ -1,4 +1,4 @@
-from util import prime, is_prime
+from util import generate_prime, is_prime
 
 
 def count_prime(a, b):
@@ -11,7 +11,7 @@ def count_prime(a, b):
 
 
 def solve():
-    pa = prime()
+    pa = generate_prime()
     m = [0, 0, 0]
 
     def max_prime(a, b):
@@ -23,7 +23,7 @@ def solve():
 
     a = pa.next()
     while a < 1000:
-        pb = prime()
+        pb = generate_prime()
         b = pb.next()
         while b < 1000:
             max_prime(a, b)
@@ -38,5 +38,4 @@ def solve():
 if __name__ == "__main__":
     import cProfile
 
-    #print cycle_count(70)
     cProfile.run("print solve()")
