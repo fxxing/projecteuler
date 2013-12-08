@@ -1,4 +1,4 @@
-from util import generate_prime, is_prime
+from util import primes, is_prime
 
 
 def is_removeable_prime(n):
@@ -16,7 +16,7 @@ def is_removeable_prime(n):
 def solve():
     print 'start'
     s = 0
-    p = generate_prime()
+    p = primes()
     n = p.next()
     cd = 11
     while cd > 0:

@@ -1,20 +1,8 @@
-# too slow
-
-
-#noinspection PyDefaultArgument
-def permutation(n, r=[]):
-    if n == len(r):
-        yield []
-    l = range(n)
-    for k in r:
-        l.remove(k)
-    for d in l:
-        for right in permutation(n, r + [d]):
-            yield [d] + right
+from itertools import permutations
 
 
 def solve():
-    for i, x in enumerate(permutation(10)):
+    for i, x in enumerate(permutations("0123456789")):
         if i == 999999:
             return "".join([str(d) for d in x])
 
